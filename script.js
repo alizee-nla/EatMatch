@@ -1,5 +1,5 @@
 // Clé API Google pour accéder aux services Google
-const LAPAN41RKUZ9P5ZTKZLFHP6ZPPQCY2IS = "AIzaSyBbiu8YC1q-nJMu5y3-P9Hr6TpBJbz6rwQ";
+const GOOGLE_API_KEY = "";
 
 // Gestion du carousel d'images
 const carousel = document.getElementById("carousel");
@@ -53,7 +53,7 @@ ${conversation}
 
     // Appel à l'API Gemini pour analyser la conversation
     return fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${LAPAN41RKUZ9P5ZTKZLFHP6ZPPQCY2IS}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GOOGLE_API_KEY}`,
         {
             method: "POST",
             headers: {
