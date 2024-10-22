@@ -104,7 +104,6 @@ window.addEventListener("df-response-received", (event) => {
         // Génère une requête de recherche et trouve les restaurants correspondants
         getGooglePlaceQuery(conversation).then((query) => {
             findPlaces(query);
-            chatContainer.classList.add("hidden");
         });
     } else {
         console.log("raw or match is undefined");
@@ -118,7 +117,8 @@ const chatContainer = document.getElementById("chat-container");
 button.addEventListener("click", () => {
     chatContainer.classList.remove("hidden");
     chatContainer.classList.add("animate-fade-in");
-    chatContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    const y = chatContainer.getBoundingClientRect().top + window.pageYOffset - 300;
+    window.scrollTo({top: y, behavior: 'smooth'});
 });
 
 // Variables pour Google Maps

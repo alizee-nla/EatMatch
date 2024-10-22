@@ -15,3 +15,5 @@
     ```
     http://localhost:57164/index.html
     ```
+    
+Le site est accesible sur https://alizee-nla.github.io/EatMatch/

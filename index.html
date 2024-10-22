@@ -1,155 +1,205 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
     <meta charset="UTF-8" />
-    <title>EatMatch</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatMatch - Découvrez votre prochain restaurant</title>
+    <meta name="description" content="EatMatch vous aide à trouver le restaurant parfait grâce à l'IA">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="relative isolate px-6 lg:px-8">
-      <div
-        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true">
-        <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style="
-            clip-path: polygon(
-              74.1% 44.1%,
-              100% 61.6%,
-              97.5% 26.9%,
-              85.5% 0.1%,
-              80.7% 2%,
-              72.5% 32.5%,
-              60.2% 62.4%,
-              52.4% 68.1%,
-              47.5% 58.3%,
-              45.2% 34.5%,
-              27.5% 76.7%,
-              0.1% 64.9%,
-              17.9% 100%,
-              27.6% 76.8%,
-              76.1% 97.7%,
-              74.1% 44.1%
-            );
-          "></div>
-      </div>
-      <div class="mx-auto max-w-2xl py-16 sm:py-28 lg:py-32">
-        <div class="text-center">
-          <img src="img/logo.png" alt="Logo EatMatch" class="pb-5 mx-auto grayscale" />
-          <h1 class="text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Votre prochain repas idéal 🤤
-          </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            Avec EatMatch, découvrez les meilleurs restaurants adaptés à vos goûts grâce à l'intelligence artificielle.
-            Simplifiez votre recherche et laissez-nous vous guider vers des expériences culinaires uniques.
-          </p>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <img src="img/logo.png" alt="EatMatch" class="h-8 grayscale" />
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#comment-ca-marche" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Comment ça marche</a>
+                    <a href="#savory" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Savory IA</a>
+                    <a href="#restaurants" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Restaurants</a>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <div
-        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true">
-        <div
-          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style="
-            clip-path: polygon(
-              74.1% 44.1%,
-              100% 61.6%,
-              97.5% 26.9%,
-              85.5% 0.1%,
-              80.7% 2%,
-              72.5% 32.5%,
-              60.2% 62.4%,
-              52.4% 68.1%,
-              47.5% 58.3%,
-              45.2% 34.5%,
-              27.5% 76.7%,
-              0.1% 64.9%,
-              17.9% 100%,
-              27.6% 76.8%,
-              76.1% 97.7%,
-              74.1% 44.1%
-            );
-          "></div>
-      </div>
+    <div class="relative isolate min-h-screen flex items-center">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] animate-pulse"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+            <div class="text-center">
+                <img src="img/logo.png" alt="Logo EatMatch" class="pb-5 mx-auto grayscale" />
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-8 animate-fade-in text-balance max-w-4xl">
+                    Découvrez votre prochain <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">coup de ♥</span> culinaire
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto text-balance">
+                    Avec EatMatch et notre assistant IA Savory, trouvez le restaurant parfait en fonction de vos envies, 
+                    votre budget et vos préférences culinaires. Une expérience personnalisée pour chaque amateur de bonne cuisine.
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <button id="open-chat" class="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:from-purple-700 hover:to-pink-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600 transition-all duration-300 ease-in-out transform hover:scale-105 text-xl">
+                        <span class="flex items-center">
+                            <i class="fas fa-robot mr-2 animate-bounce"></i>
+                            Discuter avec Savory
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="w-full overflow-hidden relative">
-      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
-        <div class="w-full flex-shrink-0">
-          <img src="img/carousel-1.jpg" alt="Slide 1" />
+    <div class="w-full overflow-hidden relative bg-gray-900" id="comment-ca-marche">
+    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+        <div class="w-full flex-shrink-0 relative">
+            <img src="img/carousel-1.jpg" alt="Restaurant" class="w-full h-[600px] object-cover opacity-80" />
+            <div class="absolute inset-0 flex items-center justify-center text-white">
+                <div class="text-center max-w-2xl px-4">
+                    <h3 class="text-3xl font-bold mb-4">Dites-nous ce que vous aimez</h3>
+                    <p class="text-lg">Partagez vos préférences culinaires avec Savory</p>
+                </div>
+            </div>
         </div>
-        <div class="w-full flex-shrink-0">
-          <img src="img/carousel-2.jpg" alt="Slide 2" />
+        <div class="w-full flex-shrink-0 relative">
+            <img src="img/carousel-2.jpg" alt="Restaurants" class="w-full h-[600px] object-cover opacity-80" />
+            <div class="absolute inset-0 flex items-center justify-center text-white">
+                <div class="text-center max-w-2xl px-4">
+                    <h3 class="text-3xl font-bold mb-4">Découvrez les meilleurs restaurants</h3>
+                    <p class="text-lg">Des recommandations personnalisées selon vos goûts</p>
+                </div>
+            </div>
         </div>
-        <div class="w-full flex-shrink-0">
-          <img src="img/carousel-3.jpg" alt="Slide 3" />
+        <div class="w-full flex-shrink-0 relative">
+            <img src="img/carousel-3.jpg" alt="Expérience culinaire" class="w-full h-[600px] object-cover opacity-80" />
+            <div class="absolute inset-0 flex items-center justify-center text-white">
+                <div class="text-center max-w-2xl px-4">
+                    <h3 class="text-3xl font-bold mb-4">Vivez des expériences uniques</h3>
+                    <p class="text-lg">Des moments inoubliables autour de la table</p>
+                </div>
+            </div>
         </div>
-        <div class="w-full flex-shrink-0">
-          <img src="img/carousel-4.jpg" alt="Slide 4" />
+        <div class="w-full flex-shrink-0 relative">
+            <img src="img/carousel-4.jpg" alt="Réservation" class="w-full h-[600px] object-cover opacity-80" />
+            <div class="absolute inset-0 flex items-center justify-center text-white">
+                <div class="text-center max-w-2xl px-4">
+                    <h3 class="text-3xl font-bold mb-4">Réservez en quelques clics</h3>
+                    <p class="text-lg">Une réservation simple et rapide pour votre table</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+</div>
+
+    <!-- Section Savory -->
+    <div class="py-24 bg-white" id="savory">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        Rencontrez Savory, votre guide culinaire personnel
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Plus qu'un simple assistant, Savory comprend vos préférences et vous guide vers des expériences 
+                        culinaires uniques. Grâce à l'intelligence artificielle, il analyse des milliers de restaurants 
+                        pour vous proposer celui qui vous correspondra le mieux.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span class="text-gray-700">Recommandations personnalisées</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span class="text-gray-700">Prise en compte de votre budget</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-purple-600"></i>
+                            <span class="text-gray-700">Suggestions selon vos restrictions alimentaires</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative md:h-full h-[70vh]">
+                    <div class="w-full rounded-2xl overflow-hidden shadow-2xl h-full">
+                        <div id="chat-container" class="w-full h-full">
+                            <df-messenger
+                                oauth-client-id="23809498524-bp724p5qi06ou3mk9hahob4t2efq7q8h.apps.googleusercontent.com"
+                                location="us-central1"
+                                project-id="turing-nature-439215-i9"
+                                agent-id="1c2ded16-b4d1-4008-957e-eb5ab853724b"
+                                language-code="fr"
+                                max-query-length="-1">
+                                <df-messenger-chat chat-title="Découvrez le restaurant parfait avec Savory !">
+                                </df-messenger-chat>
+                            </df-messenger>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="flex-col px-12 md:px-24 xl:px-80">
-      <div>
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl py-2 mt-10">
-          Rencontrez Savory, votre guide vers des découvertes savoureuses.
-        </h2>
-        <p class="text-lg text-gray-600 py-5">
-          Laissez-vous guider par Gusto, votre assistant IA dédié à la découverte des meilleurs restaurants. Dites-lui
-          ce que vous aimez, il se charge du reste ! Que vous cherchiez une cuisine exotique, une ambiance romantique ou
-          un plat bien spécifique, Gusto est là pour vous proposer des recommandations sur-mesure. Parlez-lui, explorez,
-          et trouvez votre prochaine expérience culinaire en un clin d'œil.
-        </p>
-      </div>
-
-      <button
-        id="open-chat"
-        class="flex mx-auto items-center justify-center gap-x-4 mb-10 rounded-md bg-gradient-to-r from-indigo-500 to-purple-500 px-6 py-3 text-lg font-semibold text-white shadow-lg hover:from-indigo-600 hover:to-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors duration-300">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6 animate-bounce"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-        Guide moi !
-      </button>
-
-      <div id="chat-container" class="w-full hidden mb-12">
-        <link
-          rel="stylesheet"
-          href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css" />
-        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-        <df-messenger
-          oauth-client-id="23809498524-bp724p5qi06ou3mk9hahob4t2efq7q8h.apps.googleusercontent.com"
-          location="us-central1"
-          project-id="turing-nature-439215-i9"
-          agent-id="1c2ded16-b4d1-4008-957e-eb5ab853724b"
-          language-code="fr"
-          max-query-length="-1">
-          <df-messenger-chat chat-title="Laissez Savory vous aider à dénicher le restaurant parfait pour vous !">
-          </df-messenger-chat>
-        </df-messenger>
-      </div>
-      
-      <div id="restaurantResults" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-      </div>
-      <div id="map" class="hidden"></div>
+    <!-- Section Résultats -->
+    <div class="py-24 bg-gray-50" id="restaurants">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div id="restaurantResults" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Placeholder par défaut -->
+            <div class="col-span-full flex flex-col items-center justify-center text-center p-12 bg-white rounded-2xl shadow-sm border-2 border-dashed border-purple-200 hover:border-purple-300 transition-colors">
+                <div class="w-24 h-24 mb-6 rounded-full bg-purple-100 flex items-center justify-center">
+                    <i class="fas fa-utensils text-4xl text-purple-500 animate-bounce"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">Prêt à découvrir votre prochain restaurant préféré ?</h3>
+                <p class="text-gray-600 mb-8 max-w-md">
+                    Discutez avec Savory de vos envies culinaires et laissez-vous guider vers des découvertes savoureuses !
+                </p>
+                <button onclick="document.getElementById('open-chat').click()" class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-comments mr-2"></i>
+                    Parler à Savory
+                </button>
+            </div>
+        </div>
     </div>
+</div>
 
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbiu8YC1q-nJMu5y3-P9Hr6TpBJbz6rwQ&loading=async&libraries=places&callback=initMap"></script>
+    <div id="map" class="hidden h-[400px] w-full"></div>
 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="img/logo.png" alt="EatMatch" class="h-16 mb-4 grayscale invert mx-auto" />
+                    <p class="text-gray-400">Trouvez votre prochain restaurant préféré grâce à l'intelligence artificielle.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="#comment-ca-marche" class="text-gray-400 hover:text-white">Comment ça marche</a></li>
+                        <li><a href="#savory" class="text-gray-400 hover:text-white">Savory IA</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:contact@eatmatch.fr" class="text-gray-400 hover:text-white">contact@eatmatch.fr</a></li>
+                        <li class="text-gray-400">Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 EatMatch. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbiu8YC1q-nJMu5y3-P9Hr6TpBJbz6rwQ&loading=async&libraries=places&callback=initMap"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
